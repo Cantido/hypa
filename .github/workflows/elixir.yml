@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2024 Rosa Richter
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+name: Elixir build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_COLOR: 1
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        elixir-version: 1.17
+        otp-version: 27
+    - name: Restore dependencies cache
+      uses: actions/cache@v4
+      with:
+        path: deps
+        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+    - name: Install dependencies
+      run: mix deps.get
+    - name: Run test
+      run: mix test
+
+
