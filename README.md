@@ -1,5 +1,6 @@
 # Hypa
 
+[![Elixir build](https://github.com/Cantido/hypa/actions/workflows/elixir.yml/badge.svg)](https://github.com/Cantido/hypa/actions/workflows/elixir.yml)
 ![Hex.pm Version](https://img.shields.io/hexpm/v/hypa)
 ![Hex.pm License](https://img.shields.io/hexpm/l/hypa)
 [![hexdocs.pm](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/hypa/)
