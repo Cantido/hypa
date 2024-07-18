@@ -4,6 +4,7 @@ defmodule Hypa.MixProject do
   def project do
     [
       app: :hypa,
+      description: "HTMX utilities for Elixir",
       version: "0.1.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
@@ -15,6 +16,15 @@ defmodule Hypa.MixProject do
       docs: [
         main: "Hypa",
         extras: ["README.md"]
+      ],
+
+      # Package
+      package: [
+        licenses: ["AGPL-3.0-or-later"],
+        links: %{
+          "GitHub" => "https://github.com/Cantido/hypa",
+          "Sponsor" => "https://liberapay.com/rosa"
+        }
       ]
     ]
   end
