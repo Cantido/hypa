@@ -37,6 +37,7 @@ defmodule Hypa.MixProject do
 
   defp deps do
     [
+      {:phoenix, "~> 1.7.14", optional: true},
       {:plug, "~> 1.16.1"},
       {:ex_doc, "~> 0.31", only: :dev, runtime: false}
     ]
