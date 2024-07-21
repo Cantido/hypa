@@ -1,11 +1,17 @@
 # Hypa
 
 [![Elixir build](https://github.com/Cantido/hypa/actions/workflows/elixir.yml/badge.svg)](https://github.com/Cantido/hypa/actions/workflows/elixir.yml)
-![Hex.pm Version](https://img.shields.io/hexpm/v/hypa)
-![Hex.pm License](https://img.shields.io/hexpm/l/hypa)
+[![Hex.pm Version](https://img.shields.io/hexpm/v/hypa)](https://hex.pm/packages/hypa)
+[![Hex.pm License](https://img.shields.io/hexpm/l/hypa)](https://hex.pm/packages/hypa)
 [![hexdocs.pm](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/hypa/)
 
 Useful functions for Elixir applications using [htmx].
+
+Offers a `Plug` that performs a few tasks:
+
+- Parses `HX-*` headers into `conn.assigns`
+- Adds HTMX to your cache-control headers
+- Controls the rendering of layouts, hiding them for HTMX requests while showing them for non-HTMX requests.
 
 [htmx]: https://htmx.org
 
@@ -26,8 +32,7 @@ Documentation can be found at <https://hexdocs.pm/hypa>.
 
 ## Usage
 
-Use [`Hypa.Plug`] to add htmx request headers to `conn.assigns`.
-Add it to your `Plug` pipeline like this:
+Add [`Hypa.Plug`] to your `Plug` pipeline like this:
 
 ```elixir
 plug Hypa.Plug
